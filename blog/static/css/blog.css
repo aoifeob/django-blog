@@ -11,6 +11,11 @@ h2 a {
     color: #FFF019;
 }
 
+p {
+
+  padding-left: 8px;
+}
+
 h2 a:hover {
   color: #FFF019;
 }
