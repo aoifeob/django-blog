@@ -25,7 +25,7 @@ SECRET_KEY = '=5m_bt%foa=g2&bjf5%ukm=6s$5^e^fs2#gmh@acn86x7z8oy3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['obriea21.pythonanywhere.com']
 
 
 # Application definition
