@@ -1,0 +1,31 @@
+
+{% load staticfiles %}
+<html>
+
+
+    <head>
+      <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Cormorant+Garamond:600" rel="stylesheet">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <title>Aoife's blog</title>
+    </head>
+
+
+    <body>
+    <div class="page-header">
+      <center><h1><font size="15"><a href="">Aoife's Blog</a></font></h1>
+      <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">Learn about django</br></a>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

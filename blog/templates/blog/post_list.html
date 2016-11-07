@@ -1,30 +1,9 @@
+{% extends 'blog/base.html' %}
 
-{% load staticfiles %}
-<html>
-
-
-    <head>
-      <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=Cormorant+Garamond:600" rel="stylesheet">
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <title>Aoife's blog</title>
-    </head>
-
-
-    <body>
-      <div class="page-header">
-          <center><h1><font size="15"><a href="">Aoife's Blog</a></font></h1>
-          <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">Learn about django</br></a>
-    </center>  </div>
-
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
+{% block content %}
         {% for post in posts %}
         <div class="post">
-           <h2><a href=""><font size="6.5">{{ post.title }}</font></a></h2>
+           <h2><a href="{% url 'post_detail' pk=post.pk %}"><font size="6.5">{{ post.title }}</font></a></h2>
 <div class="date">
             <font size="2"><p>Published: {{ post.published_date }}</p></font>
 </div>
@@ -33,27 +12,4 @@
        </br>
        </div>
   {% endfor %}
-</div>
-  </div>
-</div>
-        <!--  <p>published: 14.06.2014, 12:14</p>
-          <h2><a href="">My first post</a></h2>
-          <ol>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-<li>D</li>
-<li>E</li>
-          </ol>
-          <p>Aenean eu leo quam. <strike>Pellentesque</strike> ornare sem <b>lacinia</b> quam venenatis <i>vestibulum</i>. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      </div>
-
-      <div>
-          <p>published: 14.06.2014, 12:14</p>
-          <h2><a href="">My second post</a></h2>
-          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-      </div>-->
-    </body>
-
-
-</html>
+{% endblock %}
