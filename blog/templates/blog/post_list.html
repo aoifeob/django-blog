@@ -4,6 +4,7 @@
 
 
     <head>
+      <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -13,16 +14,18 @@
 
     <body>
       <div>
-          <h1><a href="">Aoife's Blog</a></h1>
+          <center><h1><a href="">Aoife's Blog</a></h1>
           <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">Learn about django</br></a>
-      </div>
+    </center>  </div>
 
 
         {% for post in posts %}
         <div>
-           <p>published: {{ post.published_date }}</p>
            <h2><a href="">{{ post.title }}</a></h2>
+            <font size="8"><p>Published: {{ post.published_date }}</p></font>
            <p>{{ post.text|linebreaksbr }}</p>
+         </br>
+       </br>
        </div>
   {% endfor %}
         <!--  <p>published: 14.06.2014, 12:14</p>
