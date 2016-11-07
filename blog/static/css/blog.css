@@ -4,11 +4,13 @@ h1 a {
 }
 
 h1 a:hover {
-color: #BB5CDB;
+color: #76059C;
+text-decoration: none;
 }
 
 h2 a {
-    color: #FFF019;
+    color: #FFEE00;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 p {
@@ -17,7 +19,8 @@ p {
 }
 
 h2 a:hover {
-  color: #FFF019;
+  color: #E0D100;
+  text-decoration: none;
 }
 
 body {
