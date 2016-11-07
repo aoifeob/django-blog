@@ -4,6 +4,7 @@
 
 
     <head>
+
       <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="//fonts.googleapis.com/css?family=Cormorant+Garamond:600" rel="stylesheet">
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -16,7 +17,10 @@
     <body>
     <div class="page-header">
       <center><h1><font size="15"><a href="">Aoife's Blog</a></font></h1>
-      <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">Learn about django</br></a>
+<a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">Learn about django</br></a>
+{% if user.is_authenticated %}
+<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endif %}
     </div>
     <div class="content container">
         <div class="row">
