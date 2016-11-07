@@ -40,6 +40,11 @@ h1 {
     font-family: 'Lobster', cursive;
 }
 
+h2 {
+  color: #FFEE00;
+  font-family: 'Cormorant Garamond', serif;
+}
+
 h2 a{
 color: #FFEE00;
 font-family: 'Cormorant Garamond', serif;
@@ -52,6 +57,7 @@ h2 a:hover {
 
 .date {
     color: #828282;
+    
 }
 
 .save {
