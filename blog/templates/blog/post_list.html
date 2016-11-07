@@ -2,6 +2,8 @@
 
 
     <head>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <title>Aoife's blog</title>
     </head>
 
@@ -9,9 +11,10 @@
     <body>
       <div>
           <h1><a href="">Aoife's Blog</a></h1>
+          <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">Learn about django</br></a>
       </div>
 
-      
+
         {% for post in posts %}
         <div>
            <p>published: {{ post.published_date }}</p>
